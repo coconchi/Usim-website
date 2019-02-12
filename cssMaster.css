@@ -1,3 +1,13 @@
 #logo{
   width: 50px;
 }
+
+#jumbotron_health{
+  text-align: right;
+
+}
+
+/* fix larger jumbotron size
+.jumbotron{
+  height: 500px;
+} */
