@@ -1,0 +1,4 @@
+Para correr el servidor con python:
+En la terminal, poner:
+  python -m http.server
+Esto abrirá un servidor local, que puede ser normalmente accedido desde el browser, en el puerto 8000 (localhost:8000)
