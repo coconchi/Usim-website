@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>USim Home Page</title>
+      <!--INCLUDE STYLESHEETS-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/cssMaster.css">
+      <link rel="stylesheet" href="css/footercss.css">
+      <link rel="stylesheet" href="css/indexcss.css">
+
+      <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+      <!-- NAV BAR -->
+      <div id="navBar"></div>
+      <script>
+          $('#navBar').load('navi.html');
+      </script>
+
+      <!-- JUMBOTRON -->
+      <div id= 'simUnit' class="jumbotron" style="background-image:url(img/abm.png)">
+        <h1 align='center' style='color:white'>Simulation Unit</h1>
+        <h5 align='center' style='color:#017583'>National Laboratory of Public Policy</h3>
+      </div>
+
+<!-- MAIN CONTENT -->
+    <main role="main" class="container">
+
+      <!--ABOUT USIM  -->
+      <section id='aboutUSim' class='container'>
+        <h1 style='color:#017583'>About USim</h1>
+      </section>
+
+
+    <!-- OUR MISSION -->
+    <section id='ourMission' class='container'>
+      <div class="panel-heading">
+        <h3 class="panel-title">Our mission</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p style='color:'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </section>
+
+
+    <!-- OUR TECHNIQUES -->
+    <section id='ourTechniques' class='container'>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Our techniques</h3>
+        </div>
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+      <!-- OUR TEAM -->
+      <section id='ourTeam' class='container'>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Our team</h3>
+          </div>
+          <div class="panel-body">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </section>
+
+    </main><!-- /.container -->
+
+    <!-- Footer -->
+    <footer id='footer'></footer>
+    <script>
+      $('#footer').load('footer.html');
+    </script>
+
+
+
+  </body>
+  <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
+
+</html>
