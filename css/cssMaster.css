@@ -9,14 +9,11 @@ html, body{
 }
 
 #jumbotron_health{
+  background: url(img/steth.jpg) fixed center no-repeat;
   text-align: right;
+  color: #017583;
 }
 
 #main{
   overflow: auto;
 }
-
-/* fix larger jumbotron size
-.jumbotron{
-  height: 500px;
-} */
