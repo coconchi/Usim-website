@@ -1,3 +1,9 @@
-h3 {
+
+
+h1, h3 {
   color: #017583;
+}
+
+.panel-title {
+  color: green;
 }
