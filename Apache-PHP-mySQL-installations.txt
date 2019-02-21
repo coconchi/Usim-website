@@ -1,0 +1,152 @@
+#### Start and stop Apache on macOS
+
+#para iniciar apache
+
+	$ sudo apachectl start
+
+# to check the server-s working, open a browser and go to localhost 
+	$ sudo apachectl stop
+	$ sudo apachectl restart
+
+# to check what version of Apache is running on computer:
+	$ httpd -v
+
+# to edit configurations in Apache:
+	$ sudo nano /etc/apache2/httpd.conf
+
+# to run a configuration test
+	$ sudo apachectl configtest  <-- this command reads the configuration file and if 									 there is any problem, it reports it
+	
+# this directory contatins the default apache test files
+	$ cd /Library/WebServer/Documents
+
+# Usually, web resources are stored in /Library/WebServer/Documents
+# We need to change permissions to write and read for everyone (cmd + I)	
+
+
+
+
+#### Configue personal sites folders
+
+# A personal website folder is subfolder of your home folder
+# En ~ crear un folder que se llame Sites, i.e., ~/Sites <-- the OS recognizes this as a 
+# reserved directory name
+
+# Uncomment 
+# ---- LoadModule userdir_module libexec/apache2/mod_userdir.so 
+# ---- Include /private/etc/apache2/extra/httpd-userdir.conf
+# with:
+	$ sudo nano /etc/apache2/httpd.conf
+
+# Uncomment
+# ---- Include /private/etc/apache2/users/*.conf
+# with:
+	$ sudo nano /etc/apache2/extra/httpd-userdir.conf
+
+# In
+	$ cd /etc/apache2/users
+# If the next file doesnt exist, then type:
+ 	$ sudo nano alejandro.conf
+ 	# This file should look like:	
+
+	 	<Directory "/Users/alejandro/Sites/">
+	        Options Indexes MultiViews
+	        AllowOverride None
+	        Require all granted
+		</Directory>
+
+	# If it doesnt, change it 
+
+
+
+#### ACTIVATE PHP IN MAC OS
+# Once again, we need to edit Apache-s main configuration file with
+	$ sudo nano /etc/apache2/httpd.conf
+
+	# In the file, add the next line if it doesn-t exist
+	AddHandler php5-script php  
+	# this means that files that have php in their name will be handled with php
+
+	# Uncomment the next line:
+	LoadModule php5_module libexec/apache2/libphp5.so
+	# Notice that we do not use php7 because we have php5 installed in macOS
+
+# Now we need to create a php configuration file
+# In:
+	$ cd /private/etc/
+	$ ls php* <-- to see al files that star with php
+	$ sudo cp php.ini.default php.ini <-- to copy the file named php.ini.default into php.ini
+
+	# Then we-ll edit this file we created with
+		$ sudo nano php.ini
+		# In this editor..
+		display_errors=On (if it is set to Off)
+
+# To test php is working, place a .php file in Sites folder
+# Then start apache with:
+	$ sudo apachectl start
+# Then go to the browser and type:
+	localhost/~alejandro/filename.php with the name of the .php file
+
+
+#### INSTALL MySQL IN MAC OS 
+# Download the MySQL community edition fron MySQL website
+# Download MySQL workbench
+
+# After installation, a new dialogue will appear in OS System Preferences
+# System Preferences > MySQL <-- The MySQL server can be started and stopped here
+
+# Install MySQL Workbench <–– MySQL workbench is the GUI of MySQL
+	# Double click to open the server
+
+
+
+# If you need to use a different MAMP stack, you will need to stop the Apache server
+# When this server is stopped, you can use another version os Apache
+
+# Uninstalling MySQL is a little bit more complex
+# Stop server: System Preferences > MySQL > stop server (in case it-s started)
+	# You should also make sure you are not running a MySQL workbench
+	# Once the server is stopped, type the following commands in terminal:
+	# (Before we type these commands,it is necessary to authenticate ourselves as
+	# superusers: $ sudo . )
+		$ sudo rm /usr/local/mysql
+		$ sudo rm -rf /usr/local/mysql*
+		$ sudo rm -rf /Library/StartupItems/MySQLCOM
+		$ sudo rm -rf /Library/PreferencePanes/My*
+		$ sudo rm -rf /Library/Receipts/mysql*
+		$ sudo rm -rf /Library/Receipts/MySQL*
+		$ sudo rm /etc/my.cnf
+
+# To uninstall MySQL Workbench go to apps, right-click in Workbenck and move to trash.
+# Then empty your trash
+
+
+#### GET STARTED WITH MAMP ON MAC OS 
+# The MAMP software bundle is onw of the easiest ways to get started with Apache, PHP and MySQL on ma OS
+
+# From the MAMP web page, download the installer
+# Place the app in the apps
+# Go to the MAMP app 
+# From the MAMP app, we can go to the MAMP site. In tools > phpMyAdmin, we can find php management
+
+
+
+#### Configure Apache and MySQL server ports
+# In the MAMP app, all of the options are available under Preferences:
+	# start/stop
+	# ports
+	# PHP
+	# WebServer
+	# MySQL
+
+
+#### Uninstall MAMP
+# Open application and make sure all servers are stopped
+# In app directory, 
+
+
+#### COMMON TASKS AND TROUBLESHOOTING
+#### Diagnose port conflict on macOS
+# Port conflicts can arise when we install more than one version of a server
+ 	$ sudo lsof -n -i4TCP:80 -sTCP:LISTEN  <-- lsof means list open files. The number after the colon is 							  the port we want to examine
