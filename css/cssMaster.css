@@ -7,13 +7,13 @@ html, body{
 #logo{
   width: 50px;
 }
-/*
-#jumbotron_health{
-  background: url(img/health_banner.jpg) fixed center no-repeat;
-  text-align: right;
-  color: #017583;
-}
-*/
 #main{
   overflow: auto;
+}
+
+#project_par *{
+  background-color: #aabedd;
+  color: #646566;
+  padding: 20px;
+  /* margin: 20px white; */
 }
