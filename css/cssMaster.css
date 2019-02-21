@@ -7,13 +7,13 @@ html, body{
 #logo{
   width: 50px;
 }
-
+/*
 #jumbotron_health{
-  background: url(img/steth.jpg) fixed center no-repeat;
+  background: url(img/health_banner.jpg) fixed center no-repeat;
   text-align: right;
   color: #017583;
 }
-
+*/
 #main{
   overflow: auto;
 }
