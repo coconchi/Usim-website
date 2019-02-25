@@ -46,10 +46,10 @@
 # In
 	$ cd /etc/apache2/users
 # If the next file doesn-t exist in directory, then type:
- 	$ sudo nano alejandro.conf
+ 	$ sudo nano alejandrob.conf <--- substitute "alejandrob" with a valid user
  	# This file should look like:
 
-	 	<Directory "/Users/alejandro/Sites/">
+	 	<Directory "/Users/alejandrob/Sites/">
 	        Options Indexes MultiViews
 	        AllowOverride None
 	        Require all granted
@@ -86,7 +86,7 @@
 # Then start apache with:
 	$ sudo apachectl start
 # Then go to the browser and type:
-	localhost/~alejandro/filename.php with the name of the .php file
+	localhost/~alejandrob/filename.php with the name of the .php file
 
 
 #### INSTALL MySQL IN MAC OS
