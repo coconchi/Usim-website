@@ -4,7 +4,7 @@
 
 	$ sudo apachectl start
 
-# to check the server-s working, open a browser and go to localhost 
+# to check the server-s working, open a browser and go to localhost
 	$ sudo apachectl stop
 	$ sudo apachectl restart
 
@@ -16,38 +16,38 @@
 
 # to run a configuration test
 	$ sudo apachectl configtest  <-- this command reads the configuration file and if 									 there is any problem, it reports it
-	
+
 # this directory contatins the default apache test files
 	$ cd /Library/WebServer/Documents
 
 # Usually, web resources are stored in /Library/WebServer/Documents
-# We need to change permissions to write and read for everyone (cmd + I)	
+# We need to change permissions to write and read for everyone (cmd + I)
 
 
 
 
-#### Configue personal sites folders
+#### Configue personal Sites folders
 
 # A personal website folder is subfolder of your home folder
-# En ~ crear un folder que se llame Sites, i.e., ~/Sites <-- the OS recognizes this as a 
+# En ~ crear un folder que se llame Sites, i.e., ~/Sites <-- the OS recognizes this as a
 # reserved directory name
 
-# Uncomment 
-# ---- LoadModule userdir_module libexec/apache2/mod_userdir.so 
-# ---- Include /private/etc/apache2/extra/httpd-userdir.conf
-# with:
+# With:
 	$ sudo nano /etc/apache2/httpd.conf
+# Uncomment the following lines:
+# ---- LoadModule userdir_module libexec/apache2/mod_userdir.so
+# ---- Include /private/etc/apache2/extra/httpd-userdir.conf
 
-# Uncomment
-# ---- Include /private/etc/apache2/users/*.conf
-# with:
+# With:
 	$ sudo nano /etc/apache2/extra/httpd-userdir.conf
+# Uncomment the following line:
+# ---- Include /private/etc/apache2/users/*.conf
 
 # In
 	$ cd /etc/apache2/users
-# If the next file doesnt exist, then type:
+# If the next file doesn-t exist in directory, then type:
  	$ sudo nano alejandro.conf
- 	# This file should look like:	
+ 	# This file should look like:
 
 	 	<Directory "/Users/alejandro/Sites/">
 	        Options Indexes MultiViews
@@ -55,7 +55,7 @@
 	        Require all granted
 		</Directory>
 
-	# If it doesnt, change it 
+	# If it doesn-t, change it
 
 
 
@@ -64,7 +64,7 @@
 	$ sudo nano /etc/apache2/httpd.conf
 
 	# In the file, add the next line if it doesn-t exist
-	AddHandler php5-script php  
+	AddHandler php5-script php
 	# this means that files that have php in their name will be handled with php
 
 	# Uncomment the next line:
@@ -89,7 +89,7 @@
 	localhost/~alejandro/filename.php with the name of the .php file
 
 
-#### INSTALL MySQL IN MAC OS 
+#### INSTALL MySQL IN MAC OS
 # Download the MySQL community edition fron MySQL website
 # Download MySQL workbench
 
@@ -122,12 +122,12 @@
 # Then empty your trash
 
 
-#### GET STARTED WITH MAMP ON MAC OS 
+#### GET STARTED WITH MAMP ON MAC OS
 # The MAMP software bundle is onw of the easiest ways to get started with Apache, PHP and MySQL on ma OS
 
 # From the MAMP web page, download the installer
 # Place the app in the apps
-# Go to the MAMP app 
+# Go to the MAMP app
 # From the MAMP app, we can go to the MAMP site. In tools > phpMyAdmin, we can find php management
 
 
@@ -143,7 +143,7 @@
 
 #### Uninstall MAMP
 # Open application and make sure all servers are stopped
-# In app directory, 
+# In app directory,
 
 
 #### COMMON TASKS AND TROUBLESHOOTING
