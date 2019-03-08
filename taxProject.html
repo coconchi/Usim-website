@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tax Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/cssMaster.css">
+    <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <div id="navBar"></div>
+    <script>
+        $('#navBar').load('navi.html');
+    </script>
+
+
+    <!-- jumbotron  -->
+    <div class="container">
+      <div class="jumbotron" id="jumbotron_tax" style="background-image:url(img/moneySmallSmall.png); height:200px">
+        <h1 class='h1Jumbo'>Tax simulator</h1>
+      </div>
+    </div>
+
+    <div class="container" id="project_par" style="">
+      <div class="text-wrap">
+        <h2>Fiscal policy & Inequality</h2>
+          <!-- <div class="img-fluid"><img src="img/health_ppl.png" alt="Image not found!"></div> -->
+          <p>
+            Tax systems are important structures for financing government
+            functioning and services as well as redistributing wealth,
+            altering consumption patterns, and providing (dis)incentives
+            to certain sectors of the economy. However, tax collection is
+            challenging in the developing world, particularly in Mexico,
+            which faces high rates of tax evasion and inequality. These
+            factors distort who comprises the effective tax base both for
+            income and consumption taxes on non-essential goods.
+          </p>
+      </div>
+    </div>
+
+    <div class="container" id='project_par'>
+      <div class="text-wrap">
+        <h2>Data-driven analysis</h2>
+          <p>
+            We develop a comprehensive microsimulation model of the Mexican
+            tax system that reproduces official aggregate statistics of
+            tax collection, evasion and inequality from microdata.
+            Our simulator is highly flexible, and permits changes not only
+            to individual rates, but also to subsidies of social programs and
+            exemptions and cuotas for corporate, income and consumption taxes.
+            The tool incorporates a user-friendly interface which permits
+            policy makers and researchers to compare the outcome of different
+            escenarios.
+          </p>
+
+      <p><strong>Project status: </strong> In final phase.</p>
+      <p>
+        <a href= 'https://github.com/lnpp/TaxModelLNPP' <button type="button" class="btn btn-secondary btn-lg" id='gitLink'>Access the model in our Git repository</button></a>
+      </p>
+            </div>
+    </div>
+
+
+
+
+      </body>
+
+
+    </html>

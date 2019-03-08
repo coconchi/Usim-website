@@ -17,3 +17,13 @@ html, body{
   padding: 20px;
   /* margin: 20px white; */
 }
+
+.h1Jumbo{
+  text-align: right;
+  color: #616163;
+}
+
+#gitLink{
+  color: #e8e9ed;
+  background-color: #616163;
+}
