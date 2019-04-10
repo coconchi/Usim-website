@@ -13,14 +13,14 @@ html, body{
 
 #project_par *{
   background-color: #aabedd;
-  color: #646566;
+  color: #3f3b3c;
   padding: 20px;
   /* margin: 20px white; */
 }
 
 .h1Jumbo{
   text-align: right;
-  color: #616163;
+  color: #3f3b3c;
 }
 
 #gitLink{
